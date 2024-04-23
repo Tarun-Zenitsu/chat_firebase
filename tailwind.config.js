@@ -6,6 +6,7 @@ export default {
       colors: {
         purpal: {
           1: "rgba(17, 25, 40, 0.75)",
+          2: "rgba(17, 25, 40, 0.5)",
         },
       },
     },

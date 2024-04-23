@@ -8,7 +8,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="w-[90vw] h-[90vh] rounded-lg bg-purpal-1 backdrop:blur-[19px] saturate-[180%] border-slate-300 flex">
+    <div className="w-[90vw] h-[90vh] rounded-lg bg-purpal-1 backdrop-blur saturate-[180%] border-slate-300 flex">
       <List />
       <Chat />
       <Details />

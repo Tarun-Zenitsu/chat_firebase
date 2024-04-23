@@ -11,12 +11,10 @@ const UserInfo = () => {
         />
         <h1>User name</h1>
       </div>
-      <div className="flex items-center gap-2">
-        {" "}
-        {/* Change flex-row to items-center */}
-        <img src="./more.png" alt="more" className="w-[20px] h-[20px]" />
-        <img src="./edit.png" alt="edit" className="w-[20px] h-[20px]" />
-        <img src="./video.png" alt="video" className="w-[20px] h-[20px]" />
+      <div className="flex items-center gap-3">
+        <img src="./more.png" alt="more" className="w-[18px] h-[18px]" />
+        <img src="./edit.png" alt="edit" className="w-[18px] h-[18px]" />
+        <img src="./video.png" alt="video" className="w-[18px] h-[18px]" />
       </div>
     </div>
   );
