@@ -99,8 +99,11 @@ const Details = () => {
             />
           </div>
         </div>
-        <button className="px-1 py-2 bg-red-400 rounded-lg hover:bg-red-500 text-white">
+        <button className="px-1 py-1 bg-red-400 rounded-lg hover:bg-red-500 text-white">
           Block User
+        </button>
+        <button className="px-1 py-1 bg-blue-400 rounded-lg hover:bg-blue-500 text-white">
+          Log out
         </button>
       </div>
     </div>

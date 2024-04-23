@@ -1,18 +1,21 @@
 import { useState } from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "./index.css";
-import Chat from "./components/Chat";
-import Details from "./components/Details";
-import List from "./components/List";
+import SignUp from "./components/aut/SignUp";
+import LogIn from "./components/aut/LogIn";
+import Home from "./pages/Home";
 
 function App() {
   const [count, setCount] = useState(0);
-
+  const user = false;
   return (
-    <div className="w-[90vw] h-[90vh] rounded-lg bg-purpal-1 backdrop-blur saturate-[180%] border-slate-300 flex">
-      <List />
-      <Chat />
-      <Details />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<LogIn />} />
+        <Route path="/signup" element={<SignUp />} />
+      </Routes>
+    </Router>
   );
 }
 
