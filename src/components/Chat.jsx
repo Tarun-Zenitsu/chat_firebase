@@ -32,7 +32,148 @@ const Chat = () => {
           <img src="./info.png" alt="info" className="h-5 w-5" />
         </div>
       </div>
-      <div className="p-5 flex-1"></div>
+      <div className="p-5 flex-1 overflow-scroll flex flex-col gap-5">
+        <div className="max-w-[70%] flex gap-5 ">
+          <img
+            src="./avatar.png"
+            alt="user"
+            className="w-7 h-7 object-cover rounded-full"
+          />
+          <div className="flex-1 flex-col gap-1">
+            <p className="p-5 bg-purpal-1 rounded-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates, doloribus!
+            </p>
+            <span className="text-xs">1 min ago</span>
+          </div>
+        </div>
+        <div className="max-w-[70%] flex gap-5 self-end">
+          <div className="text">
+            <img
+              src="https://images.pexels.com/photos/19478782/pexels-photo-19478782/free-photo-of-woman-laying-face-down-in-grass.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt="image"
+              className="w-full h-[300px] rounded-lg object-cover"
+            />
+            <p className="bg-blue-400 rounded-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates, doloribus!
+            </p>
+            <span className="text-xs">1 min ago</span>
+          </div>
+        </div>
+        <div className="max-w-[70%] flex gap-5 ">
+          <img
+            src="./avatar.png"
+            alt="user"
+            className="w-7 h-7 object-cover rounded-full"
+          />
+          <div className="flex-1 flex-col gap-1">
+            <p className="p-5 bg-purpal-1 rounded-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates, doloribus!
+            </p>
+            <span className="text-xs">1 min ago</span>
+          </div>
+        </div>
+        <div className="max-w-[70%] flex gap-5 self-end">
+          <div className="text">
+            <img
+              src="https://images.pexels.com/photos/19478782/pexels-photo-19478782/free-photo-of-woman-laying-face-down-in-grass.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt="image"
+              className="w-full h-[300px] rounded-lg object-cover"
+            />
+            <p className="bg-blue-400 rounded-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates, doloribus!
+            </p>
+            <span className="text-xs">1 min ago</span>
+          </div>
+        </div>
+        <div className="max-w-[70%] flex gap-5 ">
+          <img
+            src="./avatar.png"
+            alt="user"
+            className="w-7 h-7 object-cover rounded-full"
+          />
+          <div className="flex-1 flex-col gap-1">
+            <p className="p-5 bg-purpal-1 rounded-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates, doloribus!
+            </p>
+            <span className="text-xs">1 min ago</span>
+          </div>
+        </div>
+        <div className="max-w-[70%] flex gap-5 self-end">
+          <div className="text">
+            <img
+              src="https://images.pexels.com/photos/19478782/pexels-photo-19478782/free-photo-of-woman-laying-face-down-in-grass.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt="image"
+              className="w-full h-[300px] rounded-lg object-cover"
+            />
+            <p className="bg-blue-400 rounded-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates, doloribus!
+            </p>
+            <span className="text-xs">1 min ago</span>
+          </div>
+        </div>
+        <div className="max-w-[70%] flex gap-5 ">
+          <img
+            src="./avatar.png"
+            alt="user"
+            className="w-7 h-7 object-cover rounded-full"
+          />
+          <div className="flex-1 flex-col gap-1">
+            <p className="p-5 bg-purpal-1 rounded-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates, doloribus!
+            </p>
+            <span className="text-xs">1 min ago</span>
+          </div>
+        </div>
+        <div className="max-w-[70%] flex gap-5 self-end">
+          <div className="text">
+            <img
+              src="https://images.pexels.com/photos/19478782/pexels-photo-19478782/free-photo-of-woman-laying-face-down-in-grass.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt="image"
+              className="w-full h-[300px] rounded-lg object-cover"
+            />
+            <p className="bg-blue-400 rounded-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates, doloribus!
+            </p>
+            <span className="text-xs">1 min ago</span>
+          </div>
+        </div>
+        <div className="max-w-[70%] flex gap-5 ">
+          <img
+            src="./avatar.png"
+            alt="user"
+            className="w-7 h-7 object-cover rounded-full"
+          />
+          <div className="flex-1 flex-col gap-1">
+            <p className="p-5 bg-purpal-1 rounded-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates, doloribus!
+            </p>
+            <span className="text-xs">1 min ago</span>
+          </div>
+        </div>
+        <div className="max-w-[70%] flex gap-5 self-end">
+          <div className="text">
+            <img
+              src="https://images.pexels.com/photos/19478782/pexels-photo-19478782/free-photo-of-woman-laying-face-down-in-grass.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              alt="image"
+              className="w-full h-[300px] rounded-lg object-cover"
+            />
+            <p className="bg-blue-400 rounded-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptates, doloribus!
+            </p>
+            <span className="text-xs">1 min ago</span>
+          </div>
+        </div>
+      </div>
       <div className="p-5 flex items-center justify-between border-t-2 border-slate-600 gap-3">
         <div className="flex gap-5">
           <img src="./img.png" alt="img" className="w-5 h-5 cursor-pointer" />
