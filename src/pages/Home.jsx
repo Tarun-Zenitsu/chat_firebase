@@ -4,6 +4,7 @@ import Chat from "../components/Chat";
 import List from "../components/List";
 import Details from "../components/Details";
 import LogIn from "../components/aut/LogIn";
+import { ToastContainer } from "react-toastify";
 
 function Home() {
   const [count, setCount] = useState(0);
