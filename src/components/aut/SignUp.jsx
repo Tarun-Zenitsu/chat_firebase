@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../lib/firebase";
 
 const SignUp = () => {
   const [avatar, setAvatar] = useState({
@@ -15,11 +18,26 @@ const SignUp = () => {
       });
     }
   };
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const { username, email, password } = Object.fromEntries(formData);
+    try {
+      const res = await createUserWithEmailAndPassword(auth, email, password);
+    } catch (err) {
+      console.log(err);
+      toast.error(err.message);
+    }
+  };
   return (
     <div className="w-[90vw] h-[90vh] rounded-lg bg-purpal-1 backdrop-blur saturate-[180%] border-slate-300 flex items-center justify-center">
       <div className="flex items-center justify-center flex-col gap-5 w-[30vw] h-[60vh] bg bg-purpal-4">
         <h2 className="text-3xl">Crate an Account</h2>
-        <form className="flex flex-col gap-2 items-center">
+        <form
+          className="flex flex-col gap-2 items-center"
+          onSubmit={handleRegister}
+        >
           <img
             src={avatar.url || "./avatar.png"}
             alt="usrImg"
@@ -38,7 +56,7 @@ const SignUp = () => {
             <input
               type="username"
               placeholder="user name"
-              name="name"
+              name="username"
               className=" bg-purpal-3 w-[18vw] h-9 rounded-md border-none outline-none text-white placeholder:text-center p-2"
             />
           </div>
