@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../../lib/firebase";
@@ -11,6 +11,7 @@ const SignUp = () => {
     file: null,
     url: "",
   });
+  const navigation = useNavigate();
   const [loding, setLoading] = useState(false);
   const handelAvatar = (e) => {
     if (e.target.files[0]) {
@@ -40,6 +41,7 @@ const SignUp = () => {
         chats: [],
       });
       toast.success("Account created you can login now");
+      navigation("/");
     } catch (err) {
       console.log(err);
       toast.error(err.message);
@@ -97,7 +99,7 @@ const SignUp = () => {
             className="bg-[#5183fe] text-white w-[18vw] py-1 rounded-md border-none"
             disabled={loding}
           >
-            {loding ? "Loadig.." : "Signup"}
+            {loding ? "Loadig.." : "Sign Up"}
           </button>
           <div>
             <h1 className="text-lg text-gray-400">

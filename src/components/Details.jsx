@@ -1,6 +1,12 @@
 import React from "react";
+import { auth } from "../lib/firebase";
+import { useNavigate } from "react-router-dom";
 
 const Details = () => {
+  const navigation = useNavigate();
+  const handelSignOut = () => {
+    auth.signOut().then(() => navigation("/login"));
+  };
   return (
     <div className="w-[30%]">
       <div className="px-7 py-5 flex flex-col items-center gap-5 border-b-2 border-gray-600 text-center">
@@ -102,7 +108,10 @@ const Details = () => {
         <button className="px-1 py-1 bg-red-400 rounded-lg hover:bg-red-500 text-white">
           Block User
         </button>
-        <button className="px-1 py-1 bg-blue-400 rounded-lg hover:bg-blue-500 text-white">
+        <button
+          className="px-1 py-1 bg-blue-400 rounded-lg hover:bg-blue-500 text-white"
+          onClick={handelSignOut}
+        >
           Log out
         </button>
       </div>
