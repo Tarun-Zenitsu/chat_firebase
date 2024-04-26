@@ -1,9 +1,17 @@
 import React from "react";
 
 const AddUser = () => {
+  const handelSearch = async (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    const username = formData.get("username");
+
+    try {
+    } catch (error) {}
+  };
   return (
     <div className="max-w-max max-h-max p-8 bg-purpal-1 rounded-md top-0 bottom-0 left-0 right-0 absolute m-auto">
-      <form className="flex gap-5">
+      <form className="flex gap-5" onSubmit={handelSearch}>
         <input
           type="text"
           placeholder="username"
