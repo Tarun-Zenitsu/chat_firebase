@@ -8,16 +8,18 @@ const ChatList = () => {
   const [chats, setChats] = useState([]);
   const [addMode, setAddMode] = useState(false);
   const { currentUser } = useUserStore();
+
   useEffect(() => {
     const unsub = onSnapshot(
       doc(db, "usersChats", currentUser.id),
       async (res) => {
-        const items = res.data().chats();
-        const promises = items.map(async (items) => {
-          const userDocRef = doc(db, "users", items.receiverId);
+        const items = res.data().chats; // Removed parentheses
+        const promises = items.map(async (chat) => {
+          // Changed variable name to chat
+          const userDocRef = doc(db, "users", chat.receiverId); // Changed variable name to chat
           const userDocSnap = await getDoc(userDocRef);
           const user = userDocSnap.data();
-          return { ...items, user };
+          return { ...chat, user }; // Changed variable name to chat
         });
         const chatData = await Promise.all(promises);
         setChats(chatData.sort((a, b) => b.updatedAt - a.updatedAt));
@@ -27,7 +29,7 @@ const ChatList = () => {
       unsub();
     };
   }, [currentUser.id]);
-  console.log(chats);
+
   return (
     <div className="flex-1 overflow-scroll">
       <div className="flex items-center gap-[20px] p-[20px]">
@@ -49,15 +51,16 @@ const ChatList = () => {
       {chats.map((chat) => (
         <div
           className="flex items-center gap-5 p-5 cursor-pointer border-b-2 border-gray-600"
-          key={chat.chatId}
+          key={chat.chatId} // Ensure a unique key
         >
           <img
-            src="./avatar.png"
+            src={chat.user.avatar || "./avatar.png"}
             alt="userimg"
             className="w-12 h-12 rounded-full object-fill"
           />
           <div className="flex flex-col gap-2">
-            <span className="font-medium">Tarun kk</span>
+            <span className="font-medium">{chat.user.username}</span>{" "}
+            {/* Use chat.user.username for the username */}
             <p className="font-light">{chat.lastMessage}</p>
           </div>
         </div>
